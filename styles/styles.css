@@ -1,0 +1,33 @@
+:root {
+  --primary-background: #242038;
+  --navigation-background: #151515;
+  --font-color: #cac4ce;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--font-color);
+  background-color: var(--primary-background);
+}
+li {
+  text-decoration: none;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: var(--font-color);
+}
+#navigation {
+  background-color: var(--navigation-background);
+  opacity: 0.8;
+}
+.navigation__list {
+  color: var(--font-color);
+  display: flex;
+  flex-direction: row;
+}

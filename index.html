@@ -8,20 +8,24 @@
 	, initial-scale=1.0"
     />
     <title>INOX-TAR</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
     <header>
-      <nav>
-        <navbar>
-          <ul>
+      <section id="navigation">
+        <nav class="navigation__list">
+          <ul class="navigation__list">
             <li><a href="#">LOGO</a></li>
             <li><a href="#">Główna</a></li>
             <li><a href="#">Usługi</a></li>
             <li><a href="#">Projekty</a></li>
             <li><a href="#">Zadzwoń</a></li>
-          </ul></navbar
-        >
-      </nav>
+          </ul>
+          <div class="hamburger">
+            <button><img src="./images/hamburger.svg" alt="" /></button>
+          </div>
+        </nav>
+      </section>
     </header>
     <main>
       <section id="main--view">
@@ -80,8 +84,46 @@
           <button>Wyświetl wszystko</button>
         </div>
       </section>
-      <section id="gallery__slider"></section>
+      <section id="gallery__slider">
+        <img src="./images/gallery/2.jpg" alt="" />
+      </section>
     </main>
-    <footer></footer>
+    <footer>
+      <section id="footer">
+        <div class="adress">
+          <p>INOX-TAR</p>
+          <p>Rzeszów</p>
+          <p>ul. Kwiatkowskiego</p>
+          <p>Ileś tam 35-311 Rzeszów</p>
+        </div>
+        <div class="contact">
+          <img src="./images/phone.svg" alt="phone" />123-456-789
+        </div>
+        <div class="mail">
+          <img
+            src="./images/mail.svg"
+            alt="letter"
+          />Jakub.Rajtar.inox-tar@gmail.com
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">LOGO</a></li>
+            <li><a href="#">Główna</a></li>
+            <li><a href="#">Usługi</a></li>
+            <li><a href="#">Projekty</a></li>
+            <li><a href="#">Zadzwoń</a></li>
+          </ul>
+        </nav>
+        <div class="community">
+          <ul>
+            <li><img src="./images/facebook.svg" alt="" /></li>
+            <li><img src="./images/instagram.svg" alt="" /></li>
+            <li><img src="./images/snapchat.svg" alt="" /></li>
+            <li><img src="./images/tiktok.svg" alt="" /></li>
+          </ul>
+        </div>
+        <button>KONTAKT</button>
+      </section>
+    </footer>
   </body>
 </html>
