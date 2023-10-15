@@ -12,8 +12,13 @@
 
 body {
   color: var(--font-color);
-  background-color: var(--primary-background);
 }
+header {
+  height: 100vh;
+  background-image: url(../images/gallery/background__mobile.jpg);
+  background-size: cover;
+}
+
 li {
   text-decoration: none;
   list-style-type: none;
