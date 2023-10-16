@@ -97,6 +97,9 @@ footer {
   h1 {
     margin-bottom: 3rem;
   }
+  .background__header--image {
+    content: url(../images/gallery/background.jpg);
+  }
 }
 @media screen and (min-width: 1024px) {
 }
