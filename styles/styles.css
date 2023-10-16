@@ -1,7 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+
 :root {
   --primary-background: #242038;
   --navigation-background: #151515;
+  --footer-background: #cac4ce;
   --font-color: #cac4ce;
+  --font-color-white: #fff;
 }
 
 * {
@@ -12,11 +16,29 @@
 
 body {
   color: var(--font-color);
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
 }
+.background__header--wrapper {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -999;
+  background-color: var(--primary-background);
+}
+.background__header--image {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1000;
+  opacity: calc(0.6);
+}
+
 header {
   height: 100vh;
-  background-image: url(../images/gallery/background__mobile.jpg);
-  background-size: cover;
+  /* background-image: url(../images/gallery/background__mobile.jpg);
+  background-size: cover; */
 }
 
 li {
@@ -35,4 +57,46 @@ a {
   color: var(--font-color);
   display: flex;
   flex-direction: row;
+}
+
+#main--view {
+  height: 100vh;
+  color: var(--font-color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0rem 3rem;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 300;
+}
+.main--view__p {
+  margin-bottom: 3rem;
+}
+main {
+  background-color: var(--primary-background);
+}
+footer {
+  background-color: var(--footer-background);
+  color: var(--primary-background);
+}
+@media screen and (min-width: 700px) {
+  #main--view {
+    height: auto;
+    border: 3px solid var(--font-color-white);
+    margin: 5rem 6rem;
+    padding: 7rem;
+    justify-content: space-around;
+  }
+  .main--view__p {
+    margin-bottom: 0;
+  }
+  h1 {
+    margin-bottom: 3rem;
+  }
+}
+@media screen and (min-width: 1024px) {
 }
