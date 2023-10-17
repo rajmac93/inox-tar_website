@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
 
 :root {
+  --black: #000;
   --primary-background: #242038;
   --navigation-background: #151515;
   --footer-background: #cac4ce;
@@ -36,9 +37,7 @@ body {
 }
 
 header {
-  height: 100vh;
-  /* background-image: url(../images/gallery/background__mobile.jpg);
-  background-size: cover; */
+  min-height: 100vh;
 }
 
 li {
@@ -49,6 +48,7 @@ a {
   text-decoration: none;
   color: var(--font-color);
 }
+/* <header> section */
 #navigation {
   background-color: var(--navigation-background);
   opacity: 0.8;
@@ -67,6 +67,11 @@ a {
   justify-content: space-evenly;
   align-items: center;
   padding: 0rem 3rem;
+  transition: 0.2s linear;
+  -webkit-transition: 0.2s linear;
+  -moz-transition: 0.2s linear;
+  -ms-transition: 0.2s linear;
+  -o-transition: 0.2s linear;
 }
 
 h1 {
@@ -102,4 +107,54 @@ footer {
   }
 }
 @media screen and (min-width: 1024px) {
+  #main--view {
+    flex-direction: row;
+    justify-content: center;
+    height: 100vh;
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+  .main--view__h1 {
+    max-width: 39.375rem;
+    max-height: 27.9375rem;
+    min-height: 27.9375rem;
+    min-width: 30rem;
+    /* margin: 5rem 0 5rem 6rem; */
+    padding: 7rem;
+    border: 3px solid var(--font-color-white);
+    margin-left: 5rem;
+  }
+
+  .main--view__h1 + .main--view__p {
+    max-width: 39.5625rem;
+    max-height: 27.9375rem;
+    min-height: 27.9375rem;
+    min-width: 30rem;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    margin-right: 5rem;
+  }
+  .main--view__p > p {
+    font-size: 1.1rem;
+  }
+  h1 {
+    font-weight: 400;
+    margin-bottom: 0;
+  }
+}
+/* <main> section */
+#about--me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#about--me > * {
+  margin: 2rem;
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
