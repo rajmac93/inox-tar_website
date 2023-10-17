@@ -1,8 +1,16 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
 
 :root {
   --black: #000;
   --primary-background: #242038;
+  --secondary-background: #8d86c9;
   --navigation-background: #151515;
   --footer-background: #cac4ce;
   --font-color: #cac4ce;
@@ -12,6 +20,7 @@
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -31,6 +40,7 @@ body {
   position: fixed;
   height: 100vh;
   width: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
   z-index: -1000;
   opacity: calc(0.6);
@@ -55,16 +65,30 @@ a {
 }
 .navigation__list {
   color: var(--font-color);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
 }
 
 #main--view {
   height: 100vh;
   color: var(--font-color-white);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   padding: 0rem 3rem;
   transition: 0.2s linear;
@@ -94,6 +118,7 @@ footer {
     border: 3px solid var(--font-color-white);
     margin: 5rem 6rem;
     padding: 7rem;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
   }
   .main--view__p {
@@ -108,7 +133,12 @@ footer {
 }
 @media screen and (min-width: 1024px) {
   #main--view {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     height: 100vh;
     border: none;
@@ -145,16 +175,77 @@ footer {
 }
 /* <main> section */
 #about--me {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
-#about--me > * {
+#about--me > .about {
   margin: 2rem;
 }
 .about {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
+
+.my__services > h2 {
+  text-align: center;
+  padding-top: 1.2rem;
+  font-size: 1.8rem;
+}
+
+.my__services > ul > li {
+  margin: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+hr {
+  width: 100%;
+  background-color: var(--secondary-background);
+  opacity: calc(0.5);
+}
+.about > p {
+  margin: 1rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.1875rem;
+}
+h3 {
+  padding-top: 1.2rem;
+  font-size: 1.8rem;
+}
+h3,
+.fifth__element > p {
+  margin: 1.2rem;
+  text-align: center;
+}
+
+/* testing about hover */
+/* .about:hover {
+  background-color: var(--secondary-background);
+  box-shadow: 0px 0px 15px 15px rgba(0, 0, 0, 0.44);
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+} */
+/* testing about hover */
