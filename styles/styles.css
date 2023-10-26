@@ -161,7 +161,9 @@ h1 {
 .main--view__h1_brand {
   font-size: 4.5rem;
 }
-
+.brand__name {
+  text-transform: uppercase;
+}
 main {
   background-color: var(--primary-background);
 }
@@ -216,6 +218,7 @@ footer {
 .my__services > h2 {
   text-align: center;
   padding-top: 1.3rem;
+  margin: 0 2rem;
   font-size: 1.8rem;
 }
 
@@ -242,8 +245,12 @@ h3 {
 }
 h3,
 .fifth__element > p {
-  margin: 1.2rem;
-  text-align: center;
+  margin: 2rem 4rem;
+  text-align: justify;
+}
+.brand__owner {
+  font-weight: bold;
+  text-decoration: underline;
 }
 .last__element__tablet__pc {
   display: none;
