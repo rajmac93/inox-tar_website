@@ -63,8 +63,12 @@ a {
 /* <header> section */
 #navigation {
   background-color: var(--navigation-background);
-  opacity: 0.8;
+  /* opacity: 0.8; */
 }
+.navbar--hide__on__mobile {
+  display: none;
+}
+
 .navigation__list {
   color: var(--font-color);
 }
@@ -76,7 +80,7 @@ a {
   align-items: center;
 }
 .navigation__list li {
-  height: 2rem;
+  height: 5rem;
 }
 .navigation__list li:first-child {
   margin-right: auto;
@@ -96,10 +100,10 @@ a {
   top: 0;
   right: 0;
   height: 100vh;
-  width: 250px;
+  width: 100%;
   z-index: 999;
   background-color: var(--secondary-background);
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
@@ -110,6 +114,16 @@ a {
 .sidebar a {
   width: 100%;
 }
+
+li .logo img {
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  height: 80%;
+}
+/* header #main--view {
+  width: 100vw;
+} */
 #main--view {
   height: 100vh;
   color: var(--font-color-white);
@@ -126,7 +140,7 @@ a {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0rem 3rem;
+  padding: 0rem 2rem;
   transition: 0.2s linear;
   -webkit-transition: 0.2s linear;
   -moz-transition: 0.2s linear;
@@ -135,14 +149,17 @@ a {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 1.5rem;
+  text-align: center;
   font-weight: 300;
 }
+.brand__wrapper .logo {
+  height: 12rem;
+  width: 100%;
+}
+
 .main--view__h1_brand {
   font-size: 4.5rem;
-}
-.main--view__p {
-  margin-bottom: 3rem;
 }
 
 main {
@@ -501,6 +518,14 @@ address {
     -ms-transition: 0.2s ease-in;
     -o-transition: 0.2s ease-in;
   }
+  .navbar--hide__on__mobile {
+    display: flex;
+  }
+
+  li .hamburger {
+    display: none;
+  }
+
   #about--me {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -578,12 +603,13 @@ address {
     -ms-flex-pack: center;
     justify-content: center;
     height: 100vh;
+    min-width: 50rem;
     border: none;
     margin: 0;
     padding: 0;
   }
   .main--view__h1 {
-    max-width: 39.375rem;
+    max-width: 50rem;
     max-height: 27.9375rem;
     min-height: 27.9375rem;
     min-width: 30rem;
@@ -594,15 +620,21 @@ address {
   }
 
   .main--view__h1 + .main--view__p {
-    max-width: 39.5625rem;
+    max-width: 50rem;
     max-height: 27.9375rem;
     min-height: 27.9375rem;
     min-width: 30rem;
     background-color: rgba(0, 0, 0, 0.5);
     margin-right: 5rem;
   }
+  .main--view__p {
+    padding: 5rem 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .main--view__p > p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
   h1 {
     font-weight: 400;
