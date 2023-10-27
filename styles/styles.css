@@ -642,7 +642,12 @@ address {
     justify-content: center;
   }
   .main--view__p > p {
-    font-size: 1.3vw;
+    font-size: 1.2vw;
+    margin: 2rem;
+  }
+  .invitation--to--cooperate {
+    text-transform: uppercase;
+    text-decoration: underline;
   }
   h1 {
     font-weight: 400;
