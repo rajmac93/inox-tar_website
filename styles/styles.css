@@ -614,6 +614,7 @@ address {
     border: none;
     margin: 0;
     padding: 0;
+    overflow: auto;
   }
   .main--view__h1 {
     max-width: 50rem;
@@ -641,7 +642,7 @@ address {
     justify-content: center;
   }
   .main--view__p > p {
-    font-size: 1.3rem;
+    font-size: 1.3vw;
   }
   h1 {
     font-weight: 400;
