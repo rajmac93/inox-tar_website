@@ -60,13 +60,12 @@ body {
 }
 
 .progress-bar {
-  height: 0.1rem;
+  height: 0.2rem;
   background: var(--secondary-background);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 10000;
-  opacity: 0.7;
 }
 
 .background__header--wrapper {
