@@ -16,6 +16,26 @@
     <link rel="stylesheet" href="./styles/styles.css" />
   </head>
   <body>
+    <section class="modal modal__hidden">
+      <button class="modal__btn--close">
+        <img src="./images/close.svg" alt="" />
+      </button>
+
+      <form action="submit">
+        <form action="/action_page.php" method="get" id="contact__form">
+          <label for="name">Imię:</label>
+          <input type="text" id="name" name="name" />
+          <label for="surname">Nazwisko:</label>
+          <input type="text" id="surname" name="surname" />
+          <label for="message">Wiadomość:</label>
+          <textarea id="message" name="message"></textarea>
+          <button type="submit" form="contact__form" value="submit">
+            Wyślij
+          </button>
+        </form>
+      </form>
+    </section>
+    <div class="overlay overlay__hidden"></div>
     <button class="back--to--top back--to--top__hidden">
       <img class="back--to--top__icon" src="./images/go-to-top.svg"
       alt=up-arrow" />
