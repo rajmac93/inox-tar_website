@@ -20,7 +20,6 @@
       <button class="modal__btn--close">
         <img src="./images/close.svg" alt="" />
       </button>
-
       <form action="submit">
         <form action="/action_page.php" method="get" id="contact__form">
           <label for="name">Imię:</label>
@@ -29,7 +28,12 @@
           <input type="text" id="surname" name="surname" />
           <label for="message">Wiadomość:</label>
           <textarea id="message" name="message"></textarea>
-          <button type="submit" form="contact__form" value="submit">
+          <button
+            class="submit--form__btn"
+            type="submit"
+            form="contact__form"
+            value="submit"
+          >
             Wyślij
           </button>
         </form>
