@@ -25,23 +25,6 @@ mobileNavCloseSidebar.forEach((el) => {
 });
 // SIDEBAR EVENTS
 //________________________________________________________________
-// PROGRESS BAR
-document.addEventListener("scroll", () => {
-  const scrolledPercentage =
-    (scrollContainer().scrollTop /
-      (scrollContainer().scrollHeight - scrollContainer().clientHeight)) *
-    100;
-
-  pageProgressBar.style.width = `${scrolledPercentage}%`;
-
-  if (scrollContainer().scrollTop > showOnPx) {
-    backToTopButton.classList.remove("hidden");
-  } else {
-    backToTopButton.classList.add("hidden");
-  }
-});
-// PROGRESS BAR
-//________________________________________________________________
 // SCROLL TO TOP EVENTS
 const scrollContainer = () => {
   return document.documentElement || document.body;
@@ -50,8 +33,10 @@ const scrollContainer = () => {
 document.addEventListener("scroll", () => {
   if (scrollContainer().scrollTop > showOnPx) {
     backToTopButton.classList.remove("back--to--top__hidden");
+    backToTopButton.style.display = "block";
   } else {
     backToTopButton.classList.add("back--to--top__hidden");
+    backToTopButton.style.display = "none";
   }
 });
 
@@ -61,7 +46,14 @@ const goToTop = () => {
   });
 };
 backToTopButton.addEventListener("click", goToTop);
+document.addEventListener("scroll", () => {
+  const scrolledPercentage =
+    (scrollContainer().scrollTop /
+      (scrollContainer().scrollHeight - scrollContainer().clientHeight)) *
+    100;
 
+  pageProgressBar.style.width = `${scrolledPercentage}%`;
+});
 // SCROLL TO TOP EVENTS
 //________________________________________________________________
 // MODAL
