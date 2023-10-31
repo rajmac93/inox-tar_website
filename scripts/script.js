@@ -9,6 +9,7 @@ const pageProgressBar = document.querySelector(".progress-bar");
 const modalBtnClose = document.querySelector(".modal__btn--close");
 const showOnPx = 100;
 const backToTopButton = document.querySelector(".back--to--top");
+const html = document.querySelector("html");
 
 hamburger.addEventListener("click", function () {
   sideBar.style.display = "flex";
@@ -60,16 +61,19 @@ document.addEventListener("scroll", () => {
 const openModal = () => {
   modal.classList.remove("modal__hidden");
   overlay.classList.remove("overlay__hidden");
+  html.style.overflow = "hidden";
 };
 const closeModal = () => {
   modal.classList.add("modal__hidden");
   overlay.classList.add("overlay__hidden");
+  html.style.overflow = "auto";
 };
 
 document.addEventListener("keydown", (e) => {
   if (e.key === `Escape`) {
     modal.classList.add("modal__hidden");
     overlay.classList.add("overlay__hidden");
+    html.style.overflow = "auto";
   }
 });
 
@@ -77,3 +81,19 @@ contactBtn.addEventListener("click", openModal);
 modalBtnClose.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
 // MODAL
+// const toggleModal = (show) => {
+//   const action = show ? "remove" : "add";
+//   modal.classListaction;
+//   overlay.classListaction;
+//   html.style.overflow = show ? "hidden" : "auto";
+// };
+
+// document.addEventListener("keydown", (e) => {
+//   if (e.key === `Escape`) {
+//     toggleModal(false);
+//   }
+// });
+
+// contactBtn.addEventListener("click", () => toggleModal(true));
+// modalBtnClose.addEventListener("click", () => toggleModal(false));
+// overlay.addEventListener("click", () => toggleModal(false));
