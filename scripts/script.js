@@ -32,13 +32,9 @@ const scrollContainer = () => {
 };
 
 document.addEventListener("scroll", () => {
-  if (scrollContainer().scrollTop > showOnPx) {
-    backToTopButton.classList.remove("back--to--top__hidden");
-    backToTopButton.style.display = "block";
-  } else {
-    backToTopButton.classList.add("back--to--top__hidden");
-    backToTopButton.style.display = "none";
-  }
+  const show = scrollContainer().scrollTop > showOnPx;
+  backToTopButton.classList.toggle("back--to--top__hidden", !show);
+  backToTopButton.style.display = show ? "block" : "none";
 });
 
 const goToTop = () => {
@@ -58,42 +54,18 @@ document.addEventListener("scroll", () => {
 // SCROLL TO TOP EVENTS
 //________________________________________________________________
 // MODAL
-const openModal = () => {
-  modal.classList.remove("modal__hidden");
-  overlay.classList.remove("overlay__hidden");
-  html.style.overflow = "hidden";
-};
-const closeModal = () => {
-  modal.classList.add("modal__hidden");
-  overlay.classList.add("overlay__hidden");
-  html.style.overflow = "auto";
+
+const toggleModal = (open) => {
+  modal.classList.toggle("modal__hidden", !open);
+  overlay.classList.toggle("overlay__hidden", !open);
+  html.style.overflow = open ? "hidden" : "auto";
 };
 
 document.addEventListener("keydown", (e) => {
-  if (e.key === `Escape`) {
-    modal.classList.add("modal__hidden");
-    overlay.classList.add("overlay__hidden");
-    html.style.overflow = "auto";
-  }
+  if (e.key === `Escape`) toggleModal(false);
 });
 
-contactBtn.addEventListener("click", openModal);
-modalBtnClose.addEventListener("click", closeModal);
-overlay.addEventListener("click", closeModal);
+contactBtn.addEventListener("click", () => toggleModal(true));
+modalBtnClose.addEventListener("click", () => toggleModal(false));
+overlay.addEventListener("click", () => toggleModal(false));
 // MODAL
-// const toggleModal = (show) => {
-//   const action = show ? "remove" : "add";
-//   modal.classListaction;
-//   overlay.classListaction;
-//   html.style.overflow = show ? "hidden" : "auto";
-// };
-
-// document.addEventListener("keydown", (e) => {
-//   if (e.key === `Escape`) {
-//     toggleModal(false);
-//   }
-// });
-
-// contactBtn.addEventListener("click", () => toggleModal(true));
-// modalBtnClose.addEventListener("click", () => toggleModal(false));
-// overlay.addEventListener("click", () => toggleModal(false));
