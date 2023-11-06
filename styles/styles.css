@@ -141,7 +141,7 @@ input {
   transition: 0.2s ease;
 }
 .back--to--top:hover {
-  opacity: 0.8;
+  transform: translateY(-0.5rem);
 }
 .back--to--top__hidden {
   display: none;
@@ -407,9 +407,12 @@ h3,
   text-align: center;
   text-transform: uppercase;
   cursor: pointer;
+  opacity: 1;
+  transition: 0.1s ease;
 }
 .show__gallery--btn:hover {
   opacity: 0.5;
+  transition: 0.2s ease;
 }
 #footer {
   display: flex;
@@ -503,7 +506,14 @@ address {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border: 1px solid var(--about--me-hover-background);
+    border: 1px solid var(--secondary-background);
+    cursor: pointer;
+    transition: 0.2s ease;
+    box-shadow: 0px 0px 25px -8px rgba(0, 0, 0, 1);
+  }
+  .gallery__img:hover {
+    transform: scale(1.08);
+    transition: 0.2s ease;
   }
   .gallery__item--1 {
     grid-column-start: 1;
