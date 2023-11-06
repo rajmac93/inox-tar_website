@@ -20,27 +20,21 @@
       <button class="modal__btn--close">
         <img src="./images/close.svg" alt="" />
       </button>
-      <form action="submit">
-        <form action="/action_page.php" method="get" id="contact__form">
-          <label for="name">Imię:</label>
-          <input type="text" id="name" name="name" />
-          <label for="surname">Nazwisko:</label>
-          <input type="text" id="surname" name="surname" />
-          <label for="surname">Mail</label>
-          <input type="text" id="surname" name="surname" />
-          <label for="surname">Numer telefonu:</label>
-          <input type="text" id="surname" name="surname" />
-          <label for="message">Wiadomość:</label>
-          <textarea id="message" name="message"></textarea>
-          <button
-            class="submit--form__btn"
-            type="submit"
-            form="contact__form"
-            value="submit"
-          >
-            Wyślij
-          </button>
-        </form>
+      <form
+        action="https://getform.io/f/1516e33c-7d9b-4b58-9f52-be68e1498696"
+        method="POST"
+      >
+        <label for="name">Imię:</label>
+        <input type="text" id="name" name="name" />
+        <label for="surname">Nazwisko:</label>
+        <input type="text" id="surname" name="surname" />
+        <label for="surname">Mail</label>
+        <input type="text" id="mail" name="mail" />
+        <label for="surname">Numer telefonu:</label>
+        <input type="text" id="surname" name="surname" />
+        <label for="message">Wiadomość:</label>
+        <textarea id="message" name="message"></textarea>
+        <button class="submit--form__btn" type="submit">Wyślij</button>
       </form>
     </section>
     <div class="overlay overlay__hidden"></div>
