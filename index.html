@@ -24,24 +24,29 @@
         action="https://getform.io/f/1516e33c-7d9b-4b58-9f52-be68e1498696"
         method="POST"
       >
+        <span class="required" style="font-size: 0.7rem; margin-bottom: 1rem"
+          >* Wymagane</span
+        >
         <div class="form__wrapper">
           <div class="input__wrapper">
-            <label for="name">Imię:</label>
-            <input type="text" id="name" name="name" />
+            <label for="name"><span class="required">* </span>Imię:</label>
+            <input type="text" id="name" name="name" required />
           </div>
           <div class="input__wrapper">
-            <label for="surname">Nazwisko:</label>
-            <input type="text" id="surname" name="surname" />
+            <label for="surname"
+              ><span class="required">* </span>Nazwisko:</label
+            >
+            <input type="text" id="surname" name="surname" required />
           </div>
         </div>
         <div class="form__wrapper">
           <div class="input__wrapper">
-            <label for="surname">Mail</label>
-            <input type="email" id="mail" name="mail" />
+            <label for="surname"><span class="required">* </span>Mail:</label>
+            <input type="email" id="email" name="email" required />
           </div>
           <div class="input__wrapper">
             <label for="surname">Numer telefonu:</label>
-            <input type="text" id="phone" name="surname" />
+            <input type="number" id="phone" name="phone" pattern="[0-9]{9}" />
           </div>
         </div>
         <div class="input__wrapper">
@@ -264,11 +269,11 @@
         <div class="footer contact--ways">
           <div class="contact">
             <img src="./images/phone.svg" alt="phone" />
-            <p>123-456-789</p>
+            <p>733 744 668</p>
           </div>
-          <div class="mail">
+          <div class="contact">
             <img src="./images/mail.svg" alt="letter" />
-            <address>Jakub.Rajtar.inox-tar@gmail.com</address>
+            <address>jakubrajtar.inoxtar@gmail.com</address>
           </div>
         </div>
         <hr />

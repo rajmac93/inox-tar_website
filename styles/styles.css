@@ -42,16 +42,18 @@ body {
   justify-content: center;
   justify-content: space-around;
   gap: 0.4rem;
-  height: 10rem;
   width: 100vw;
   padding: 1.3rem 0.8rem;
-  height: 100vh;
+  height: auto;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--about--me-hover-background);
   z-index: 100000;
+}
+.required {
+  color: red;
 }
 .form__wrapper {
   display: flex;
@@ -63,6 +65,8 @@ body {
   width: 100%;
 }
 .modal__btn--close {
+  top: 1rem;
+  right: 1rem;
   align-self: flex-end;
   padding: 0.3rem;
   margin: 1.5rem 1.5rem 0 1.5rem;
@@ -81,7 +85,7 @@ input {
 #surname,
 #message,
 #phone,
-#mail {
+#email {
   all: unset;
   color: var(--primary-background);
   background-color: var(--font-color);
@@ -91,13 +95,30 @@ input {
 .modal #name,
 #surname,
 #phone,
-#mail {
+#email {
   height: 3rem;
   width: 100%;
 }
+
 .modal #message {
   width: 100%;
   height: 14rem;
+}
+.modal #name,
+#surname,
+#phone,
+#email,
+#message {
+  padding-left: 1rem;
+}
+.modal #name:focus,
+#surname:focus,
+#phone:focus,
+#email:focus,
+#message:focus {
+  outline: 2px solid var(--button-color);
+  background: #fff;
+  caret-color: var(--primary-background);
 }
 .submit--form__btn {
   all: unset;
@@ -143,6 +164,7 @@ input {
 .back--to--top:hover {
   transform: translateY(-0.5rem);
 }
+
 .back--to--top__hidden {
   display: none;
 }
@@ -401,7 +423,7 @@ h3,
   all: unset;
   width: 100%;
   height: 2.875rem;
-  margin: 1rem 0 1rem 0;
+  margin: 1rem 0 5rem 0;
   background-color: var(--button-color);
   color: var(--font-color-white);
   text-align: center;
@@ -436,11 +458,11 @@ h3,
   width: 100%;
 }
 .contact,
-.mail {
+.email {
   display: flex;
 }
 .contact img,
-.mail img {
+.email img {
   margin-right: 1rem;
 }
 address {
@@ -661,7 +683,7 @@ address {
   }
   .modal {
     width: 50vw;
-    height: 48rem;
+    height: auto;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -669,6 +691,11 @@ address {
     background-color: white;
     border: 1px solid #ddd;
     z-index: 100000;
+  }
+  .modal__btn--close {
+    position: absolute;
+    top: -5rem;
+    right: -5em;
   }
   .last__element__tablet__pc--img {
     object-fit: cover;
@@ -696,12 +723,20 @@ address {
     grid-row-gap: 0px;
     user-select: none;
   }
+  #gallery__grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
   .first__element__tablet__pc {
     grid-area: 1 / 1 / 3 / 3;
   }
   .my__services {
     grid-area: 1 / 3 / 3 / 5;
+  }
+  .gallery__grid {
+    padding-top: 10rem;
   }
   .first__element,
   .second__element,
@@ -756,7 +791,10 @@ address {
   img:hover {
     stroke: var(--primary-background) !important;
   }
-
+  .show__gallery--btn {
+    width: 20%;
+    height: 5rem;
+  }
   #main--view {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
