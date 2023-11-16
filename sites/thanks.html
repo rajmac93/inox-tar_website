@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INOX-TAR</title>
+    <link rel="stylesheet" href="../styles/thanks_styles.css" />
+  </head>
+  <body>
+    <header>
+      <section class="modal modal__hidden">
+        <button class="modal__btn--close">
+          <img src="../images/close.svg" alt="" />
+        </button>
+        <form
+          action="https://getform.io/f/1516e33c-7d9b-4b58-9f52-be68e1498696"
+          method="POST"
+        >
+          <span class="required" style="font-size: 0.7rem; margin-bottom: 1rem"
+            >* Wymagane</span
+          >
+          <div class="form__wrapper">
+            <div class="input__wrapper">
+              <label for="name"><span class="required">* </span>Imię:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="input__wrapper">
+              <label for="surname"
+                ><span class="required">* </span>Nazwisko:</label
+              >
+              <input type="text" id="surname" name="surname" required />
+            </div>
+          </div>
+          <div class="form__wrapper">
+            <div class="input__wrapper">
+              <label for="surname"><span class="required">* </span>Mail:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="input__wrapper">
+              <label for="surname">Numer telefonu:</label>
+              <input type="number" id="phone" name="phone" pattern="[0-9]{9}" />
+            </div>
+          </div>
+          <div class="input__wrapper">
+            <label for="message">Wiadomość:</label>
+            <textarea id="message" name="message"></textarea>
+          </div>
+          <button class="submit--form__btn" type="submit">Wyślij</button>
+        </form>
+      </section>
+      <div class="overlay overlay__hidden"></div>
+      <button class="back--to--top back--to--top__hidden">
+        <img
+          class="back--to--top__icon"
+          src="../images/go-to-top.svg"
+          alt="up-arrow"
+        />
+      </button>
+      <div class="progress-bar"></div>
+      <section id="navigation">
+        <nav class="navigation__list">
+          <ul class="sidebar">
+            <li>
+              <a class="hamburger--close"
+                ><img src="../images/close.svg" alt=""
+              /></a>
+            </li>
+            <li>
+              <a class="nav__close__sidebar" href="#navigation">Główna</a>
+            </li>
+            <li><a class="nav__close__sidebar" href="#about--me">Usługi</a></li>
+            <li>
+              <a class="nav__close__sidebar" href="#gallery__grid">Projekty</a>
+            </li>
+            <li><a class="nav__close__sidebar" href="#footer">Zadzwoń</a></li>
+          </ul>
+          <ul>
+            <li>
+              <a class="logo" href="../index.html"
+                ><img src="../images/logo__white.svg" alt=""
+              /></a>
+            </li>
+            <li class="navbar--hide__on__mobile">
+              <a href="../index.html#navigation">Główna</a>
+            </li>
+            <li class="navbar--hide__on__mobile">
+              <a href="../index.html#about--me">Usługi</a>
+            </li>
+            <li class="navbar--hide__on__mobile">
+              <a href="../index.html#gallery__grid">Projekty</a>
+            </li>
+            <li class="navbar--hide__on__mobile">
+              <a href="../index.html#footer">Zadzwoń</a>
+            </li>
+            <li>
+              <a class="hamburger" href="#"
+                ><img src="../images/hamburger.svg" alt="hamburger" />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </section>
+
+      <section>
+        <div class="thanks--container">
+          <h1 style="font-size: 4rem">Dziękuję za zgłoszenie!</h1>
+          <h2>
+            Możesz wrócić na stronę główną klikając ten
+            <a href="../index.html" style="text-decoration: underline">link</a>
+          </h2>
+        </div>
+      </section>
+    </header>
+
+    <script src="../scripts/script.js"></script>
+  </body>
+</html>
