@@ -216,6 +216,7 @@ a {
 /* <header> section */
 #navigation {
   background-color: var(--navigation-background);
+
   /* opacity: 0.8; */
 }
 .navbar--hide__on__mobile {
