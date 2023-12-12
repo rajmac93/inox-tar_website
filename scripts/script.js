@@ -42,6 +42,7 @@ const goToTop = () => {
     behavior: "smooth",
   });
 };
+
 backToTopButton.addEventListener("click", goToTop);
 document.addEventListener("scroll", () => {
   const scrolledPercentage =
